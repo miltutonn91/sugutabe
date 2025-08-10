@@ -1,0 +1,1567 @@
+@charset "utf-8";
+html{font-size: 62.5%;}
+/* 設定 */
+body{
+    font-family: 
+    "Noto Sans JP",
+    Arial,
+    sans-serif;
+    font-size: 14px;
+    color:#4C2E30;
+    font-style: normal;
+    line-height: 1.5;
+}
+img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* ヘッダー */
+.mainheader {
+    position: relative; /* ←重ねるための基準 */
+    width: 100%;
+}
+.header__menu{
+    padding: 3% 4%;
+}
+.mainImag {
+    width: 100%;
+    display: block;
+}
+.cach__copy {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%; /* 必要に応じて調整 */
+    z-index: 1;
+    pointer-events: none; /* クリックを透過したいとき */
+}
+.sugulogo{
+    height: 40.386px; 
+    position: relative;      
+}
+.About{
+    background: rgba(230, 213, 186, 0.34);
+    justify-content: center;
+    align-items: center; 
+    padding:60px 4.0%;
+}
+.About-text{
+    color: #4C2E30;
+    font-size: 1.8rem;
+    margin-bottom: 45px;
+}
+.strong{
+    background: rgba(255, 240, 79, 0.70);
+}
+.pc-only{
+    display: none;
+}
+.btn{
+    display: flex;
+    position: relative;
+    border-radius: 4.81px;
+    background: linear-gradient(90deg, #C30D23 0%, #B43847 39%);
+    margin: 0 auto;
+    /* width: 100%; */
+    max-width: 400px;
+    height: 100%;
+    padding:13px 0;
+    align-items: center;
+    cursor: pointer;
+}
+.btn::before{
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    right: 3px;
+    bottom: 3px;
+    border: 0.5px solid #F5F5F5;
+    border-radius: 4.81px;
+    }
+
+.ribbon{
+    display: inline-block;
+    position: relative;
+    right:7.54px;
+    box-sizing: border-box;
+    padding: 4px 2% 2% 4px;
+    color: #F5F5F5;
+    background-color: #4C2E30;
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    text-align: center;
+    width: 86.589px;
+    height: 25.279px;
+    /* margin-right: 8px; */
+    clip-path: polygon(0 0%, 100% 0, 80% 100%, 0 100%);
+    /* overflow: visible; */
+}
+.ribbon::before{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    border: none;
+    border-bottom: 5px solid transparent;
+    border-right: 10px solid #333;
+    content: '';
+    margin-right: 30px;
+}
+
+.btn-text{
+    font-size: 2.2rem;
+    color: #F5F5F5;
+    font-family: "Shippori Mincho B1", serif;
+}
+
+.click-btn{
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 12.903px solid #f5f5f5;
+    margin-left: 35px; /* ← 好きな色に変えてOK */
+}
+.otamesi-btn{
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.main--text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    writing-mode: vertical-rl;
+    font-family: "Shippori Mincho B1", serif; 
+    font-size: 1.1rem;
+    background-color: white;
+    border: 2px solid black; /* 境界線（太さ 2px, 黒, 実線） */
+    transform: translate(-50%, -50%); 
+    z-index: 8;
+}
+.main--text em{
+    text-combine-upright: all;
+    font-feature-settings: "palt" 0; /* 斜めを防ぐ */
+}
+.time-1{
+    color: #F68B1E;
+    font-size: 1.0rem;
+}
+.organic-1{
+    color: #008000;
+    font-size: 1.0rem;
+}
+.sentence2{
+    margin-top: 130px;
+}
+.cach-main{
+    font-size: 1.8rem;
+    margin-top: 21px;
+    margin-right: 16.5px;
+    margin-bottom: 36px;
+    margin-left: 60px;
+}
+.mainheader {
+    position: relative;
+    width: 100%;
+    margin: auto;
+}
+.mainImag {
+    width: 100%; 
+    height: auto;
+    display: block;
+    border-radius: 0;
+}
+.icon{
+    width: 33px;
+    height: 33px;
+    margin-right: 14px;
+}
+.icon--text{
+    font-size: 22px;
+    margin-top: 50px;
+}
+.icon--text :first-child{
+    margin-top: 0;
+}
+.header__btn{
+    color:#4C2E30
+}
+.mainImag-pc{
+    display: none;
+}
+/* ハンバーガー */
+.hamburger-icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    gap: 3px;
+    position: fixed;
+    top: 2.0rem;
+    right: 2.0rem;
+    z-index: 30;
+}
+.nav {
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 100vw;
+  }
+/* .hamburger-icon.close .hamburger-line:nth-child(1){
+    transform: rotate(-45deg);
+}
+.hamburger-icon.close .hamburger-line:nth-child(2){
+    transform: rotate(45deg);
+}
+.hamburger-icon.close .hamburger-line:nth-child(3){
+    opacity: 0;
+} */
+/* バツに変形 */
+.hamburger-icon.close .hamburger-line:nth-child(1) {
+    transform: rotate(45deg);
+    position: absolute;
+    top: 50%;
+}
+
+.hamburger-icon.close .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-icon.close .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 50%;
+}
+.nav.open{
+    opacity: 1;
+    z-index: 10;
+}
+/* ハンバーガーメニューのアイコンのスタイル */
+.hamburger-line {
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+    margin-bottom: 4px;
+}
+.active .hamburger-line:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+}
+
+.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.active .hamburger-line:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+}
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav__item{
+    font-size: 2.2rem;
+    font-weight: 400;
+    margin-top: 40px;
+}
+.nav{
+    background: rgba(255, 255, 255, 0.85);
+    opacity: 0;
+    transition: opacity .5s;
+    position: fixed;
+    z-index: -10;
+    width: 100%;
+    height: 100vh;
+    padding: 24px 6.4%;
+}
+.nav__list{
+    margin-top: 100px;
+}
+.main-title{
+    color: #4C2E30;
+    text-align: center;
+    font-family: "Shippori Mincho B1", serif; 
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.28px;
+    margin-top: 8px;
+}
+.veg{
+    display: block;
+    margin: auto;
+}
+.highlight1,.highlight2{
+    color: #B43847;
+}
+.image-osusume{
+    margin-top: 25px;
+}
+.image1-text,.image2-text,.image3-text{
+    writing-mode: vertical-rl;
+    font-size: 1.4rem;
+    font-family: "Shippori Mincho B1", serif;
+    position: absolute;
+    top:6%;
+    right: 7%;
+    z-index: 100;
+    bottom: -20px; /* 画像の下にはみ出す */
+    white-space: nowrap; /* テキストが折り返されないようにする */
+    }
+.main{
+    padding: 0;
+}
+.main1 span{
+    background-color: rgba(140, 189, 93, 0.71);
+    margin-left: 4.5px;
+    width: auto;
+    height: auto;
+    margin-top: 15px;
+    padding: 3.7px 2px;
+}
+.main2 span{
+    background-color: rgba(140, 189, 93, 0.71);
+    margin-top: 30px;
+    padding: 3.7px 2px;
+}
+.main1-2 span{
+    background-color: rgba(195, 13, 35, 0.70);
+    margin-left:4.5px ;
+    margin-top: 15px;
+    padding: 3.7px 2px;
+}
+.main2-2 span{
+    background-color: rgba(195, 13, 35, 0.70);
+    margin-top: 30px;
+    padding: 3.7px 2px;
+}
+.image2-text{
+    color: #F5F5F5;;
+}
+.main1-3 span{
+    background-color:rgba(255, 240, 79, 0.70);
+    margin-left: 4.5px;
+    margin-top: 15px;
+    padding: 3.7px 2px;
+}
+.main2-3 span{
+    background-color:rgba(255, 240, 79, 0.70);
+    margin-top: 30px;
+    padding: 3.7px 2px;
+}
+.image-container{
+    position: relative;
+    display: inline-block;
+}
+.image-container img {
+    display: block;
+    width: 100%; /* 画像をレスポンシブ対応 */
+    height: auto;
+}
+.topics{
+    padding: 60px 4.0%;
+}
+.Reason{
+    padding: 60px 4%;
+}
+.sub-topics{
+    font-weight: 500;
+}
+.sub-maintopics{
+    text-align: center;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+}
+.stripe{
+    display: inline-block;
+    transform: scaleX(-1);
+    margin-right: 10px;
+}
+.stripe-reverese{
+    margin-left: 10px;
+}
+.reason--1{
+    text-align: center;
+    font-size: 1.6rem;
+    margin-top: 15px;
+}
+.reason--2{
+    text-align: center;
+    color: #B43847;
+    font-family: "Noto Serif JP";
+    font-size: 2.6rem;
+    font-weight: 500;
+}
+.reason--3{
+    text-align: center;
+    color: #B43847;
+    font-family: "Noto Serif JP";
+    font-size: 2.6rem;
+    font-weight: 500;
+}
+.ribbon-2 {
+    position: relative;
+    display: inline-block;
+    color: #4C2E30;
+    background-color: #F5F5F5;
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 1.1rem;
+    z-index: 1;
+    padding: 1.3% 5.3%;
+    font-weight: 700;
+    border: 1.56px dashed rgba(175, 13, 26, 0.75);
+    background-color: transparent;
+    stroke-width: 1.561px;
+    margin-bottom: 25px;
+    max-width: 300px;
+}
+
+.ribbon-wapper{
+    text-align: center;
+}
+.reason-main1,.reason-main2,.reason-main3{
+    padding: 20px 0;
+    margin-top: 20px;
+}
+.red{
+    color: #B43847;
+    line-height: 22px;
+}
+.reason--sen{
+    margin-top: 15px;
+}
+.ribbon-2{
+    color: rgba(107, 87, 70, 0.91);
+    text-align: center;
+    font-family: "Noto Serif JP";
+    font-size: 23.49px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 8px;
+}
+.space-1{
+    letter-spacing: 3.758px;
+}
+.space-2{
+    letter-spacing: -1.879px;
+}
+
+.hukidashi{
+    /* display: flex; */
+    font-family: "Noto Serif JP";
+    position: relative;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    color: #4C2E30;
+    font-size: 1.6rem;
+    font-weight: 400;
+    /* display: inline-block; */
+    padding: 6px 9%;
+    border: 0.5px solid #4C2E30;
+    border-radius: 6px;
+}
+/* 吹き出しの尻尾部分 */
+.hukidashi::before{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    left: 20px;
+    margin-left: 10px;
+    bottom: -15px;
+    border-top: 15px solid #4C2E30;
+    border-right: 15px solid transparent;
+    border-left: 15px solid transparent;
+}
+.hukidashi::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    bottom: -15px;
+    border-top: 15px solid #ebdcc8;
+    border-right: 14px solid transparent;
+    border-left: 14px solid transparent;
+    left: 31px;
+}
+.fermers-name{
+    color: #4C2E30;
+    font-size: 1.6rem;
+    font-weight: 500;
+    display: flex;
+    margin-top: 30px;
+    gap: 15px;
+}
+.name--1{
+    margin-top: 12px;
+}
+.fermers-mens-img{
+    margin-top: 25px;
+}
+.mainvoice{
+    display: flex;
+    align-items: center;
+}
+.customer{
+    background-image: url('../images/Random\ static.png');
+    background-color:  rgba(254, 241, 230, 0.37);
+    margin-top: 8px;
+    padding: 18.5px 4.0%;
+}
+.customer-3th{
+    margin-top: 30px;
+}
+
+.voice--img{
+    margin-right: 10px;
+}
+.voice1-1{
+    color: #B43847;
+    text-align: center;
+    font-family: "Noto Serif JP";
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+.voice1-2{
+    margin-top: 13px;
+}
+.voice1-3{
+    margin-top: 30px;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 27px; 
+}
+.product-name-1{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    gap: 8px;
+}
+.top-1{
+    display: inline-block; /* 文字の幅にフィットさせる */
+    padding: 10px 20px; /* 余白を調整 */
+    border: 0.753px solid #4C2E30;  /* 四角い枠線 */
+    display: flex;
+    padding: 4.741px 15.061px;
+}
+.otamesi-text{
+    font-size: 2.2rem;
+    font-family: "Shippori Mincho B1", serif;
+}
+.message-1{
+    position: relative;
+    display: inline-block;
+    padding: 0 5px;
+    width: 27px;
+    height: 27px;
+    text-align: center;
+    color: #FFF;
+    font-size: 13px;
+    font-weight: bold;
+    background:  rgba(220, 77, 69) ;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+.message-1::before {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    right: -4px;
+    margin-top: -15px;
+    border: 6px solid transparent;
+    border-left: 6px solid rgba(220, 77, 69) ;
+    z-index: 0;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.message-2{
+    position: relative;
+    display: inline-block;
+    padding: 0 5px;
+    width: 27px;
+    height: 27px;
+    text-align: center;
+    color: #FFF;
+    font-size: 13px;
+    font-weight: bold;
+    background: rgba(199, 199, 46);
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+.message-2::before {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    right: -4px;
+    margin-top: -15px;
+    border: 6px solid transparent;
+    border-left: 6px solid rgba(199, 199, 46);
+    z-index: 0;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.message-1,.message-2{
+    color: #F5F5F5;
+    text-align: center;
+    font-family: "Noto Serif JP";
+    font-size: 1.38rem;
+    justify-content: center;
+    font-weight: 400;
+}
+.message-1-detail{
+    font-family: "Noto Serif JP";
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+.message-2-detail{
+    font-family: "Noto Serif JP";
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+.message-1-detail,.message-2-detail{
+    margin-left: 10px;
+}
+.message-reason{
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 27px; /* 157.143% */
+}
+.Q-1,.A-1{
+    display: flex;
+    align-items: center;
+}
+.price{
+    font-size: 2.6rem;
+    font-weight: 500;
+}
+.price-1{
+    display: flex;
+    align-items: flex-end;
+    margin-top: 10px;
+    vertical-align: baseline;
+}
+.Q--2th{
+    background: rgba(245, 245, 245, 0.66);
+    display: flex;
+    padding: 30px 3.0%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    align-self: stretch;
+    margin-top: 20px;
+}
+.tomato-survice{
+    text-align: center; 
+    margin: 25px 0;
+}
+.tomato-frame{
+    position: relative;
+    display: inline-block;
+}
+.tomato-1{
+    border-radius: 0;
+}
+  /* ← ここが内側にピッタリ8pxの枠線を作る部分！ */
+.tomato-frame::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+    border: 1px solid #F5F5F5; /* 枠線の色・太さ */
+    pointer-events: none;
+    z-index: 2;
+}
+.copy{
+    font-size: 1.0rem;
+    font-weight: 400;
+}
+/* -webkit-text-stroke-width: 0.55px;
+-webkit-text-stroke-color: #F5F5F5; */
+
+.top-button::before {
+    /* ④絶対必要 */
+    content: "";
+    display: block;
+
+    /* ⑤三角のサイズ */
+    width: 6.5px;
+    height: 6.5px;
+
+    /* ⑥三角の線と回転角度 */
+    border-top: 1.5px solid white;
+    border-right: 1.5px solid white;
+    transform: rotate(-45deg);
+}
+#topBtn {
+    background: #B43847;
+    border-radius: 50%;
+    color: #F5F5F5;
+    font-size: 1.4rem;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    /* padding: 10px 15px; */
+    border: none;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+#topBtn:hover {
+    opacity: 0.7;
+}
+.header--item :last-of-type{
+    margin-right: 0;
+}
+.header-topics{
+    padding: 3% 4.0%;
+}
+.sugulogo-header{
+    height: 40.386px; 
+} 
+.logo-header{
+    display: flex;
+    margin-bottom: 30px;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    position: relative;
+}
+.hr{
+    stroke-width: 1.667px;
+    stroke: #4C2E30;
+}
+.Products{
+    background: rgba(230, 213, 186, 0.34);
+    width: 100%;
+}
+.Survice{
+    background: rgba(231, 199, 162, 0.50);
+}
+.name{
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+.trial-imag{
+    margin-top: 15px;
+}
+.product-2{
+    margin-top: 35px;
+    margin-bottom: 25px;
+}
+.organic-farmers,.vegetables-text{
+    color: #F68B1E;
+    font-weight: 500;
+    line-height: 22px;
+}
+.farmers-text-3,.farmers-text-4{
+    margin-top: 30px;
+}
+.farmers-text-4{
+    margin-bottom: 60px;
+}
+
+.chart-wrapper {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 50px auto;
+}
+
+  /* 円グラフ */
+.pie-chart {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    /* position: relative; */
+    border: 0.805px solid #000;
+    background-color: #F5F5F5;
+    background-image: url("../images/Random\ static.png");
+    box-shadow: 0px 3.17px 3.17px 0.805px #F68B1E;
+}
+.organic{
+    position: absolute;
+    top: 15%;
+    left: 70%;
+    color: #000;
+    font-family: Aljo;
+    font-size: 2.8rem;
+    font-weight: 5;
+    transform: rotate(-11.193deg);
+}
+.pointer{
+    position: absolute;
+    top: -8%;
+    left: 50%;
+}
+.main--1::before {
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 130px;
+    height: 130px;
+    background-image: linear-gradient(rgba(220, 77, 69, 0.80) 0%, rgba(220, 77, 69, 0.80) 100%), url('../images/グラデーション.png');
+    border-radius: 50%;
+    z-index: -1; /* 背景に置く */
+}
+.main--1{
+    position: relative;
+    display: inline-block;
+    /* z-index: 1; */
+    font-weight: bold;
+    color: #fff;
+    margin-top: 45px;
+}
+.border--1{
+    text-align: center;
+}
+.border--2,.border--3{
+    text-align: center;
+}
+
+.main--2 {
+    position: relative;
+    display: inline-block;
+    /* z-index: 1; */
+    font-weight: bold;
+    color: #fff;
+    margin-top: 45px;
+    margin-right: 60px;
+    justify-content: center;
+}
+.main--2::before {
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 130px;
+    height: 130px;
+    background-image: linear-gradient(rgba(0, 128, 0, 0.39) 0%, rgba(0, 128, 0, 0.39) 100%), url('../images/グラデーション.png');
+    border-radius: 50%;
+    z-index: -1; /* 背景に置く */
+}
+.border--3{
+    text-align: center;
+}
+.main--3 {
+    position: relative;
+    display: inline-block;
+    /* z-index: 1; */
+    font-weight: bold;
+    color: #fff;
+    margin-top: 45px;
+}
+.main--3::before {
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 130px;
+    height: 130px;
+    background-image: linear-gradient(rgba(148, 121, 98, 0.78) 0%, rgba(148, 121, 98, 0.78) 100%),url('../images/グラデーション.png');
+    border-radius: 50%;
+    z-index: -1; /* 背景に置く */
+    justify-content: center;
+}
+.main--4 {
+    position: relative;
+    display: inline-block;
+    /* z-index: 1; */
+    font-weight: bold;
+    color: #fff;
+    margin-top: 45px;
+    margin-right: 60px ;
+}
+.main--4::before {
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 130px;
+    height: 130px;
+    background-image: linear-gradient(rgba(199, 199, 46, 0.66) 0%, rgba(199, 199, 46, 0.66) 100%), url('../images/グラデーション.png');
+    border-radius: 50%;
+    z-index: -1; /* 背景に置く */
+    justify-content: center;
+}
+.main--5 {
+    position: relative;
+    display: inline-block;
+    /* z-index: 1; */
+    font-weight: bold;
+    color: #fff;
+    margin-top: 45px;
+}
+.main--5::before {
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 130px;
+    height: 130px;
+    background-image: linear-gradient(rgba(255, 166, 41, 0.68) 0%, rgba(255, 166, 41, 0.68) 100%), url('../images/グラデーション.png');
+    border-radius: 50%;
+    z-index: -1; /* 背景に置く */
+    justify-content: center;
+}
+.leaf-2img{
+    width: 17px;
+    height: 17px;
+    width: 100%;
+}
+.saibai-1{
+    color: #FFF;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-top: 8px;
+}
+.saibai-2{
+    color: #000;
+    font-size: 0.9rem;
+    font-weight: 400;
+    display: inline-block; 
+    border: 0.68px solid #4C2E30;  /* 四角い枠線 */
+    background-color: #FFF;
+    /* display: flex; */
+    padding: 4.5px 5px;
+    margin-top: 3.5px;;
+}
+.medi{
+    margin-top: 50px;
+    font-weight: 400;
+    font-size: 1.4rem;
+    text-align: center;
+}
+.voice--img{
+    width: 80px;
+    height: 100px;
+}
+.We{
+    background: rgba(231, 199, 162, 0.50);
+}
+.survice__top{
+    position: relative;
+}
+.survice__maintopics{
+    padding: 20px 3.0%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    background: rgba(148, 121, 98, 0.91);
+    color: #F5F5F5;
+}
+.tomato-1{
+    width: 100%;
+    max-width: 500px;
+}
+.survice--topics{
+    text-align: center;
+    font-family: "Noto Serif JP";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 15px;
+}
+.farmers-main{
+    font-weight: 400;
+    line-height: 22px; /* 157.143% */
+}
+.footer-menu{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.heart-icon {
+    /* display: inline-block; */
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    will-change: transform;
+}
+.heart-path {
+    fill: none;
+    stroke: #aaa;
+    stroke-width: 2;
+    transition: fill 0.3s ease, stroke 0.3s ease;
+}
+
+  /* ホバー：枠線だけピンク */
+.heart-icon:hover .heart-path {
+    stroke: #E9AFA3;
+}
+
+  /* いいね時：拡大＋塗りつぶし */
+.heart-icon.liked {
+    animation: pop 0.3s ease;
+}
+
+.heart-icon.liked .heart-path {
+    fill: #E9AFA3;
+    stroke: #E9AFA3;
+}
+
+  /* 拡大アニメーション */
+@keyframes pop {
+    0%   { transform: scale(1); }
+    50%  { transform: scale(1.3); }
+    100% { transform: scale(1); }
+}
+
+/* PC */
+@media screen and (min-width:769px) {
+.mainImag{
+    display: none;
+}
+.mainheader {
+    position: relative; /* ←重ねるための基準 */
+    width: 100%;
+}
+  /* 背景写真 */
+.mainImag-pc {
+    width: 100%;
+    display: block;
+    border-radius: 0;
+}
+  /* キャッチコピー画像を重ねる */
+.cach__copy {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%; /* 必要に応じて調整 */
+    z-index: 1;
+    pointer-events: none; /* クリックを透過したいとき */
+}
+.ribbon-2 {
+    position: relative;
+    display: inline-block;
+    color: #6B5746;
+    background-color: #F5F5F5;
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 3.0rem;
+    z-index: 1;
+    padding: 0.5% 2.7%;
+    font-weight: 700;
+    border: 1.56px dashed rgba(175, 13, 26, 0.75);
+    background-color: transparent;
+    stroke-width: 1.561px;
+    margin-bottom: 25px;
+    max-width: 300px;
+}
+.icon{
+    display: none;
+}
+.close__btn,.btnmenu{
+    display: none;
+}
+.icon--text{
+    margin-right: 57px;
+    font-size: 2.2rem;
+}
+.icon--text :last-of-type{
+    margin-right: 0;
+}
+.header__menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.0% 4%;
+}
+.sugulogo{
+    width: 238px;
+    height: 69px;
+}
+.About{
+    padding: 80px 12%;
+}
+.About-text{
+    color: #4C2E30;
+    text-align: center;
+    font-size: 2.6rem;
+    font-weight: 400;
+    line-height: 45px; /* 173.077% */
+}
+.pc-only{
+    display: block;
+}
+.main--text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    writing-mode: vertical-rl;
+    font-family: "Shippori Mincho B1", serif; 
+    font-size: 1.1rem;
+    background-color: white;
+    border: 2px solid black; /* 境界線（太さ 2px, 黒, 実線） */
+    transform: translate(-50%, -50%); 
+    padding: 15px 1.3% 42px 7.3%;
+    z-index: 1000;
+    width: 431px;
+    height: 721.949px;
+    flex-shrink: 0;
+    margin-top: 40px;
+}
+.mainheader{
+    position: relative;
+}
+.image-osusume{
+    width: 100%;
+    margin: 0 auto;
+    max-width: 400px;
+}
+.top-image-container{
+    display: flex;
+    justify-content: center;
+    gap:30px;
+}
+.image-container{
+    margin-top: 80px;
+    justify-content: center;
+    align-items: center;
+}
+.main-title{
+    text-align: center;
+    font-size: 5.0rem;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2px;
+}
+.time-1,.organic-1{
+    font-size: 2.5rem;
+}
+.main--text{
+    font-size: 1.8rem;
+}
+.leaf-img{
+    width: 28.595px;
+    height: 28.595px;
+}
+.main-textmain{
+    justify-content: center;
+}
+.products{
+    display: flex;
+    gap: 70px;
+}
+.fermers--2th{
+    display: flex;
+    gap: 70px;
+}
+.customer-3th{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+.customer{
+    padding: 2% 2%;
+    max-width: 400px;
+}
+.image1-text,image2-text,image3-text{
+    padding: 0;
+}
+.reason--1{
+    color: #000;
+    text-align: center;
+    font-size: 2.0rem;
+    font-weight: 400;
+    letter-spacing: 2.488px;
+}
+.reason--2{
+    color: #B43847;
+    font-family: "Noto Serif JP";
+    font-size: 4.0rem;
+    font-weight: 500;
+}
+.reason--3{
+    color: #B43847;
+    font-family: "Noto Serif JP";
+    font-size: 3.8rem;
+    font-weight: 500;
+}
+.reason--sen{
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 32px; /* 177.778% */
+    margin-top: 40px;
+}
+.reason-main{
+    display: flex;
+    margin-top: 100px;
+}
+.reason-main1,.reason-main2,.reason-main3{
+    padding: 0 15px;
+    margin-right: 40px;
+}
+.Reason{
+    padding: 80px 7.0% 80px;
+}
+.product-2{
+    margin-top: 0;
+}
+.organic__topics{
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+}
+.main--1::after {
+	position: absolute; /*--positionを追加--*/
+	top: 0px;
+	left: 115%;
+	margin: 0 1rem;
+	content: "";
+	width: 1.0px; /*--縦線の太さ(幅)--*/
+	height: 200%;
+	background-color: #333; /*--縦線の色--*/
+}
+.main--3::after {
+	position: absolute; /*--positionを追加--*/
+	top: 0px;
+	left: 110%;
+	margin: 0 1rem;
+	content: "";
+	width: 1.0px; /*--縦線の太さ(幅)--*/
+	height: 200%;
+	background-color: #333; /*--縦線の色--*/
+}
+.border--1{
+display: flex;
+  flex-direction: column; /* ← これが大事！ */
+  align-items: center;     /* 横中央揃えしたいとき */
+    text-align: center;
+}
+.main-title br{
+    display: none;
+}
+.gragh-text{
+    display: flex;
+    align-items: flex-start;
+    align-items: center;
+    margin-top: 83px;
+    justify-content: center;
+    padding: 2% 10%;
+    margin-bottom: 50px;
+}
+.organic{
+    font-size: 33px;
+}
+.chart-wrapper{
+    margin-right: 110px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.farmers-text-2,.farmers-text-3,.farmers-text-4{
+    margin-top: 0;
+}
+.organic-farmers-text{
+    line-height: 32px;
+    align-items: center;
+}
+.farmers-text-4{
+    margin-bottom: 0px;
+}
+.survice__maintopics{
+    background: rgba(148, 121, 98, 0.91);
+    color: #F5F5F5;
+    padding: 35px 3%;
+    margin: 0;
+    z-index: 1;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+}
+.survice__top{
+    justify-content: center;
+    display: flex;
+    align-items: flex-start;
+    align-items: center;
+    gap:38px;
+    margin-top:40px;
+}
+.tomato-survice{
+    text-align: left;
+    z-index: 100;
+    margin: 0;
+}
+.tomato-1{
+    width: 100%;
+}
+.survice--topics{
+    font-family: "Noto Serif JP";
+    font-size: 3.0rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 20px;
+    text-align: left;
+}
+.survice--topics br:nth-of-type(2){
+    display: none;
+}
+.farmers-main{
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 30px
+}
+.sub-maintopics br{
+    display: none;
+}
+.btn__top{
+    display: none;
+}
+.chart-wrapper{
+    margin-bottom: 0;
+}
+.main--1::before,.main--2::before,.main--3::before,.main--4::before,.main--5::before {
+    width: 190px;
+    height: 190px;
+    z-index: -1; /* 背景に置く */
+    position: absolute;
+    top: 70px;
+    left:50%;
+}
+.leaf-2img{
+    width: 27px;
+    height: 27px;
+}
+.saibai-1{
+    font-size: 2.4rem;
+}
+.saibai-2{
+    font-size: 1.6rem;
+    border: 1px solid #000;
+}
+.saibai-1{
+    text-align: center;
+}
+.saibai-2{
+    color: #000;
+    font-weight: 400;
+    display: inline-block; 
+    padding: 5px 5px;
+}
+.pie-chart {
+    border-radius: 50%;
+    height: 230px;
+    width: 230px;
+    position: relative;
+    border: 0.805px solid #000;
+    background-color: #F5F5F5;
+    background-image: url("../images/Random\ static.png");
+}
+.medi{
+    margin-top: 70px;
+}
+.sub-maintopics{
+    font-size: 2.4rem;
+}
+.image1-text,.image2-text,.image3-text{
+    writing-mode: vertical-rl;
+    font-size: 2.0rem;
+    font-family: "Shippori Mincho B1", serif;
+    position: absolute;
+    top:-5%;
+    right: 7%;
+    z-index: 100;
+    bottom: -20px; /* 画像の下にはみ出す */
+    white-space: nowrap; /* テキストが折り返されないようにする */
+    }
+.topics{
+    padding: 80px 4.0%;
+    }
+
+.logo-header{
+    margin-bottom: 0;
+}
+.footer--top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-menu{
+    margin-bottom: 0;
+    margin-top: 0;
+    display: flex;
+    gap: 44px;
+}
+.copy{
+    margin-top: 60px;
+}
+.sugulogo-header{
+    width: 238.92px;
+    height: 69.94px;
+}
+.header--item{
+    font-size: 2.2rem;
+}
+
+.product-name-1,.price-2{
+    font-size: 18px;
+}
+.name{
+    font-size: 18px;
+}
+.otamesi-text{
+    font-size: 25px;
+}
+.price{
+    font-size: 36px;
+}
+.hukidashi{
+    font-size: 24px;
+}
+.place,.name{
+    font-size:20px
+};
+.name--1{
+    font-size: 18px;
+}
+.voice1-1{
+    font-size: 20px;
+}
+.voice1-2{
+    font-size: 16px;
+}
+.voice1-3{
+    font-size: 18px;
+}
+.message-1{
+    position: relative;
+    display: inline-block;
+    padding: 0 5px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 25px;
+    background:  rgba(220, 77, 69) ;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+.message-2{
+    position: relative;
+    display: inline-block;
+    padding: 0 5px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    background: rgba(199, 199, 46);
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+.message-1::before {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    right: -4px;
+    margin-top: -15px;
+    border: 7px solid transparent;
+    border-left: 10px solid rgba(220, 77, 69) ;
+    z-index: 0;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.message-2::before {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    right: -4px;
+    margin-top: -15px;
+    border: 7px solid transparent;
+    border-left: 10px solid rgba(199, 199, 46);
+    z-index: 0;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.message-1-detail{
+    font-size: 26px;
+}
+.message-2-detail{
+    font-size: 26px;
+}
+.message-reason{
+    font-size: 18px;
+}
+.trial-imag,.fermers-mens-img{
+    max-width: 523px;
+}
+.fermers--2th{
+    justify-content: center;
+}
+.products{
+    justify-content: center;
+}
+.product-1{
+    max-width: 523px;
+}
+.fermers-mens-img{
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.hamburger-icon{
+    display: none;
+}
+.nav{
+    display: flex;
+    position: static;
+    background: transparent;
+    opacity: 1;
+    z-index: 1;
+    height: auto;
+    width: auto;        /* モバイル時の100vwを解除 */
+    margin-left: auto;  /* 右端に寄せる */
+}
+.header__menu{
+    display: flex;
+    justify-content: space-between;
+}
+.nav__item{
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    font-size: 2.2rem;
+}
+.nav__list{
+    display: flex;
+    padding: 0;
+    gap: 57px;
+    margin-top: 0;
+}
+}
+
+
