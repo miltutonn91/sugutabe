@@ -1545,6 +1545,7 @@ display: flex;
     height: auto;
     width: auto;        /* モバイル時の100vwを解除 */
     margin-left: auto;  /* 右端に寄せる */
+    padding: 0 !important;
 }
 .header__menu{
     display: flex;
