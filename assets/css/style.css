@@ -18,8 +18,10 @@ img {
 
 /* ヘッダー */
 .mainheader {
-  position: relative; /* ←重ねるための基準 */
+  position: relative;
   width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
 }
 .header__menu {
   padding: 3% 4%;
@@ -164,16 +166,14 @@ img {
   margin-bottom: 36px;
   margin-left: 60px;
 }
-.mainheader {
-  position: relative;
-  width: 100%;
-  margin: auto;
-}
+
 .mainImag {
   width: 100%;
   height: auto;
   display: block;
   border-radius: 0;
+  min-height: 100vh;
+  object-fit: cover;
 }
 .icon {
   width: 33px;
@@ -1073,6 +1073,8 @@ img {
     width: 100%;
     display: block;
     border-radius: 0;
+    height: 100vh;
+    object-fit: cover;
   }
   /* キャッチコピー画像を重ねる */
   .cach__copy {
