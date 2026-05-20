@@ -214,15 +214,7 @@ img {
   right: 0;
   width: 100vw;
 }
-/* .hamburger-icon.close .hamburger-line:nth-child(1){
-    transform: rotate(-45deg);
-}
-.hamburger-icon.close .hamburger-line:nth-child(2){
-    transform: rotate(45deg);
-}
-.hamburger-icon.close .hamburger-line:nth-child(3){
-    opacity: 0;
-} */
+
 /* バツに変形 */
 .hamburger-icon.close .hamburger-line:nth-child(1) {
   transform: rotate(45deg);
@@ -699,8 +691,6 @@ img {
   font-size: 1rem;
   font-weight: 400;
 }
-/* -webkit-text-stroke-width: 0.55px;
--webkit-text-stroke-color: #F5F5F5; */
 
 .top-button::before {
   /* ④絶対必要 */
