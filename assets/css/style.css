@@ -1080,7 +1080,6 @@ img {
     width: 100%;
     display: block;
     border-radius: 0;
-    height: 100vh;
     object-fit: cover;
   }
   /* キャッチコピー画像を重ねる */
