@@ -27,9 +27,7 @@ img {
 }
 .mainImag {
   width: 100%;
-  height: auto;
   display: block;
-  border-radius: 0;
 }
 .cach__copy {
   position: absolute;
@@ -1080,6 +1078,7 @@ img {
     width: 100%;
     display: block;
     border-radius: 0;
+    height: 100vh;
     object-fit: cover;
   }
   /* キャッチコピー画像を重ねる */
