@@ -20,7 +20,6 @@ img {
 .mainheader {
   position: relative;
   width: 100%;
-  min-height: 100vh;
   overflow: hidden;
 }
 .header__menu {
@@ -28,7 +27,9 @@ img {
 }
 .mainImag {
   width: 100%;
+  height: auto;
   display: block;
+  border-radius: 0;
 }
 .cach__copy {
   position: absolute;
@@ -1161,9 +1162,6 @@ img {
     height: 721.949px;
     flex-shrink: 0;
     margin-top: 40px;
-  }
-  .mainheader {
-    position: relative;
   }
   .image-osusume {
     width: 100%;
