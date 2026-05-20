@@ -18,9 +18,9 @@ img {
 
 /* ヘッダー */
 .mainheader {
-  position: relative;
+  position: relative; /* ←重ねるための基準 */
   width: 100%;
-  overflow: hidden;
+  margin: auto;
 }
 .header__menu {
   padding: 3% 4%;
@@ -171,8 +171,6 @@ img {
   height: auto;
   display: block;
   border-radius: 0;
-  min-height: 100vh;
-  object-fit: cover;
 }
 .icon {
   width: 33px;
@@ -232,8 +230,6 @@ img {
 }
 .nav.open {
   opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
   z-index: 10;
 }
 /* ハンバーガーメニューのアイコンのスタイル */
@@ -267,11 +263,7 @@ img {
 .nav {
   background: rgba(255, 255, 255, 0.85);
   opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition:
-    opacity 0.5s ease,
-    visibility 0.5s ease;
+  transition: opacity 0.5s;
   position: fixed;
   z-index: -10;
   width: 100%;
@@ -1078,8 +1070,6 @@ img {
     width: 100%;
     display: block;
     border-radius: 0;
-    height: 100vh;
-    object-fit: cover;
   }
   /* キャッチコピー画像を重ねる */
   .cach__copy {
@@ -1160,6 +1150,9 @@ img {
     height: 721.949px;
     flex-shrink: 0;
     margin-top: 40px;
+  }
+  .mainheader {
+    position: relative;
   }
   .image-osusume {
     width: 100%;
