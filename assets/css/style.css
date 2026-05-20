@@ -554,6 +554,7 @@ img {
 }
 .otamesi-text {
   font-size: 2.2rem;
+  margin-top: 2px;
   font-family: 'Shippori Mincho B1', serif;
 }
 .message-1 {
@@ -1466,6 +1467,7 @@ img {
   }
   .otamesi-text {
     font-size: 25px;
+    margin-top: 3px;
   }
   .price {
     font-size: 36px;
