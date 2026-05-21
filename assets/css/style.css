@@ -419,7 +419,6 @@ img {
 
 .ribbon-wapper {
   text-align: center;
-  margin-top:20px;
 }
 .reason-main1,
 .reason-main2,
@@ -442,7 +441,8 @@ img {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  margin-top: 8px;
+  margin-top: 15px;
+  margin-bottom:15px;
 }
 .space-1 {
   letter-spacing: 3.758px;
@@ -652,6 +652,10 @@ img {
   align-items: baseline;
   margin-top: 10px;
   gap: 4px;
+}
+.price-2 {
+  position: relative;
+  top: -2px;
 }
 .Q--2th {
   background: rgba(245, 245, 245, 0.66);
@@ -1096,7 +1100,8 @@ img {
     border: 1.56px dashed rgba(175, 13, 26, 0.75);
     background-color: transparent;
     stroke-width: 1.561px;
-    margin-bottom: 25px;
+    margin-top:30px;
+    margin-bottom: 30px;
     max-width: 300px;
   }
   .icon {
@@ -1241,7 +1246,7 @@ img {
   }
   .reason-main {
     display: flex;
-    margin-top: 80px;
+    margin-top: 70px;
   }
   .reason-main1,
   .reason-main2,
@@ -1468,7 +1473,6 @@ img {
   }
   .otamesi-text {
     font-size: 25px;
-    margin-top: 4px;
   }
   .price {
     font-size: 36px;
