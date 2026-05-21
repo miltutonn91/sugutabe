@@ -1093,7 +1093,7 @@ img {
     border: 1.56px dashed rgba(175, 13, 26, 0.75);
     background-color: transparent;
     stroke-width: 1.561px;
-    margin-top:20px;
+    margin-top:30px;
     margin-bottom: 30px;
     max-width: 300px;
   }
@@ -1193,8 +1193,6 @@ img {
   .products {
     display: flex;
     gap: 70px;
-    justify-content: center;
-    margin-bottom:15px;
   }
   .fermers--2th {
     display: flex;
@@ -1555,6 +1553,10 @@ img {
   }
   .fermers--2th {
     justify-content: center;
+  }
+  .products {
+    justify-content: center;
+    margin-bottom:15px;
   }
   .product-1 {
     max-width: 523px;
