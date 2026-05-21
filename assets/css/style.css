@@ -765,6 +765,9 @@ img {
   margin-top: 35px;
   margin-bottom: 25px;
 }
+.products {
+  margin-bottom: 10px;
+}
 .organic-farmers,
 .vegetables-text {
   color: #f68b1e;
@@ -1092,8 +1095,8 @@ img {
     border: 1.56px dashed rgba(175, 13, 26, 0.75);
     background-color: transparent;
     stroke-width: 1.561px;
-    margin-top:30px;
-    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-bottom: 35px;
     max-width: 300px;
   }
   .icon {
@@ -1193,6 +1196,7 @@ img {
     display: flex;
     gap: 70px;
     justify-content: center;
+    margin-bottom: 20px;
   }
   .fermers--2th {
     display: flex;
