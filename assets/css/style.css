@@ -419,6 +419,7 @@ img {
 
 .ribbon-wapper {
   text-align: center;
+  margin-top:20px;
 }
 .reason-main1,
 .reason-main2,
@@ -554,7 +555,7 @@ img {
 }
 .otamesi-text {
   font-size: 2.2rem;
-  margin-top: 2px;
+  margin-top: 3px;
   font-family: 'Shippori Mincho B1', serif;
 }
 .message-1 {
@@ -648,9 +649,9 @@ img {
 }
 .price-1 {
   display: flex;
-  align-items: flex-end;
+  align-items: baseline;
   margin-top: 10px;
-  vertical-align: baseline;
+  gap: 4px;
 }
 .Q--2th {
   background: rgba(245, 245, 245, 0.66);
@@ -1240,7 +1241,7 @@ img {
   }
   .reason-main {
     display: flex;
-    margin-top: 100px;
+    margin-top: 80px;
   }
   .reason-main1,
   .reason-main2,
@@ -1467,7 +1468,7 @@ img {
   }
   .otamesi-text {
     font-size: 25px;
-    margin-top: 3px;
+    margin-top: 4px;
   }
   .price {
     font-size: 36px;
