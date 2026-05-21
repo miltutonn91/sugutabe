@@ -750,7 +750,6 @@ img {
 .products {
   background: rgba(230, 213, 186, 0.34);
   width: 100%;
-  margin-bottom:10px;
 }
 .survice {
   background: rgba(231, 199, 162, 0.5);
@@ -1193,6 +1192,7 @@ img {
   .products {
     display: flex;
     gap: 70px;
+    justify-content: center;
   }
   .fermers--2th {
     display: flex;
@@ -1553,10 +1553,6 @@ img {
   }
   .fermers--2th {
     justify-content: center;
-  }
-  .products {
-    justify-content: center;
-    margin-bottom:15px;
   }
   .product-1 {
     max-width: 523px;
