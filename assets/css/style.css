@@ -360,7 +360,6 @@ img {
 }
 .topics {
   padding: 60px 4%;
-  background: rgba(230, 213, 186, 0.34);
 }
 .Reason {
   padding: 60px 4%;
@@ -748,7 +747,7 @@ img {
   stroke-width: 1.667px;
   stroke: #4c2e30;
 }
-.products {
+.Products {
   background: rgba(230, 213, 186, 0.34);
   width: 100%;
 }
