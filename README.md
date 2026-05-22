@@ -28,7 +28,7 @@ https://github.com/miltutonn91/sugutabe
 | Figma | デザイン作成 |
 | Photoshop | 画像編集 |
 | Illustrator | 素材・パーツ作成 |
-| コード管理：Git / GitHub|
+| Git / GitHub|コード管理
 | GitHub Pages | サイト公開 |
 
 ---
